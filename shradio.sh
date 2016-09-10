@@ -16,6 +16,9 @@ elif [ ! -x "$(which curl)" ]; then
     echo "$(basename "$0"): Erro: 'curl' não está instalado."; exit 1
 fi
 
+# Suprimir erros
+exec 2>/dev/null
+
 # script
 SCRIPT="$(basename "$0")"
 
