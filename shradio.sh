@@ -4,17 +4,17 @@
 # Data: 15 de Agosto de 2016
 # Criado por: Juliano Santos [x_SHAMAN_x]
 # Script: shRadio2.sh
+# Página: http://shellscriptx.blogspot.com.br
 # Descrição: Script para execução de radios online atraves do serviço de stream
 #------------------------------------------------------------------------------#
 
 # Verifica pacotes necessários
-if [ ! -x "$(which mplayer)" ]; then
-    echo "$(basename "$0"): Erro: 'mplayer' não está instalado."; exit 1
-elif [ ! -x "$(which yad)" ]; then
-    echo "$(basename "$0"): Erro: 'yad' não está instalado."; exit 1
-elif [ ! -x "$(which curl)" ]; then
-    echo "$(basename "$0"): Erro: 'curl' não está instalado."; exit 1
-fi
+for pkg in mplayer yad curl
+do
+    if ! which $pkg &>/dev/null; then
+        echo "$(basename "$0"): Erro: '$pkg' não está instalado."; exit 1
+    fi
+done
 
 # Suprimir erros
 exec 2>/dev/null
