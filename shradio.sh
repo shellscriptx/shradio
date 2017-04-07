@@ -5,6 +5,7 @@
 # Criado por: Juliano Santos [x_SHAMAN_x]
 # Script: shRadio2.sh
 # Página: http://shellscriptx.blogspot.com.br
+# Fanpage: https://www.facebook.com/shellscriptx
 # Descrição: Script para execução de radios online atraves do serviço de stream
 #------------------------------------------------------------------------------#
 
